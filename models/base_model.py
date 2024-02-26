@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-import uuid
+
+'''Class Basemodel that defines all common atributes/methods for other classes'''
+
+
+import uuid import uuid4
 import datetime
 
-
 class BaseModel:
+    '''Class basemodel'''
 
     def __init__(self):
         self.id = str(uuid.uuid4())
@@ -22,15 +26,3 @@ class BaseModel:
         dict_copy['created_at'] = self.created_at.isoformat()
         dict_copy['updated_at'] = self.updated_at.isoformat()
         return dict_copy
-    
-my_model = BaseModel()
-my_model.name = "My First Model"
-my_model.my_number = 89
-print(my_model)
-my_model.save()
-print(my_model)
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
