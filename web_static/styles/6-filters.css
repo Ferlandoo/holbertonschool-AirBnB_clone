@@ -1,91 +1,87 @@
+section {
+    display: flex;
+}
+
 .filters {
-    background-color: white;
+    background-color: #FFFFFF;
     height: 70px;
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
-section.filters > button{
+.filters button {
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
-    color: white;
     background-color: #FF5A5F;
+    color: #FFFFFF;
     height: 48px;
-    border: 0px;
     border-radius: 4px;
     width: 20%;
-    margin-left: auto;
+    border: none;
     margin-right: 30px;
-    opacity: 1;
+    margin-left: auto;
+    align-self: center;
 }
 
-section.filters > button:hover {
+.filters button:hover {
     opacity: 0.9;
-}
-
-.locations, .amenities {
-    height: 100%;
-    width: 25%;
-    padding-left: 50px;
 }
 
 .locations {
     border-right: 1px solid #DDDDDD;
-}
-.locations > h3, .amenities > h3 {
-    font-weight: 600;
-    margin: 12px 0 5px 0;
+    width: 25%;
+    height: 100%;
 }
 
-.locations > h4, .amenities > h4 {
+.locations:hover .popover {
+    display: block;
+}
+
+.amenities {
+    width: 25%;
+    height: 100%;
+}
+
+.amenities:hover .popover {
+    display: block;
+}
+
+.filters h3 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+}
+
+.filters h4 {
     font-weight: 400;
     font-size: 14px;
-    margin: 0 0 5px 0;
+    margin-top: 0px;
+    margin-left: 30px;
+    margin-bottom: 0px;
+
 }
 
 .popover {
     display: none;
     position: relative;
-    left: -51px;
     background-color: #FAFAFA;
-    width: 100%;
-    border: 1px solid #DDDDDD;
+    border: #DDDDDD 1px solid;
     border-radius: 4px;
-    z-index: 1;
-    padding: 30px 50px 30px 0;
-    margin-top: 17px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.popover, .popover ul {
+.popover li {
     list-style-type: none;
-}
-.locations:hover > .popover {
-    display: block;
-}
-
-.amenities:hover > .popover {
-    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .popover h2 {
-    margin-top: 0px;
-    margin-bottom: 5px;
-}
-
-.locations > .popover > li {
-    margin-bottom: 30px;
-    margin-left: 30px;
-}
-.locations > .popover > li > ul {
-    padding-left: 20px;
-}
-.locations > .popover > li > ul > li {
-    margin-bottom: 10px;
-}
-
-.amenities > .popover > li {
-    margin-left: 50px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: -12px;
 }

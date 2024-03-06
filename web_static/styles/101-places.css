@@ -29,6 +29,7 @@ section {
 }
 
 .article {
+    display: flex;
     flex-direction: column;
     width: 390px;
     border: #FF5A5F 1px solid;
@@ -45,10 +46,8 @@ section {
 .name_and_price_container {
     display: flex;
     flex-direction: row;
-    text-align: center;
     justify-content: center;
     margin-left: 30%;
-
 }
 
 .price_by_night {
@@ -76,12 +75,13 @@ section {
     border-bottom: #DDDDDD 1px solid;
     justify-content: center;
     align-items: center;
-    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 8px;
     margin: 0px;
 }
 
 .information_text {
-    margin-top: 45px;
+    margin-top: 48px;
 }
 
 .max_guest {
@@ -123,6 +123,56 @@ section {
 .description {
     width: 95%;
     text-align: left;
+    margin-top: -30px;;
     padding: 10px;
-    padding-bottom: 20px;
+}
+
+.article .amenities {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-align: left;
+    width: 100%;
+    padding: 0px;
+    height: 120px;
+}
+
+.article .amenities h2, .article .reviews h2 {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-bottom: 0px;
+}
+
+.article .amenities li, .article .reviews li {
+    list-style-type: none;
+    margin-left: -30px;
+    margin-bottom: 10px;
+}
+
+.article .amenities ul {
+    columns: 2;
+}
+
+.article .reviews {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: left;
+    width: 100%;
+    padding: 0px;
+}
+
+.article .reviews h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.article .reviews p {
+    margin-top: -11px;
+    font-size: 12px;
 }
